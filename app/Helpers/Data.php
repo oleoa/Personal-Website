@@ -10,12 +10,6 @@ class Data
     // Current Page (Route Name)
     private string $current;
 
-    // Logged Status
-    private bool $logged;
-
-    // Dark Mode Status
-    private bool $darkmode;
-
     // Custom Data
     private array $custom;
 
@@ -23,8 +17,6 @@ class Data
     {
         $this->title = '';
         $this->current = '';
-        $this->logged = false;
-        $this->darkmode = false;
         $this->custom = array();
     }
     
@@ -39,18 +31,6 @@ class Data
     {
         if ($current) $this->current = $current;
         else return $this->current;
-    }
-
-    public function logged($logged = null)
-    {
-        if ($logged) $this->logged = $logged;
-        else return $this->logged;
-    }
-
-    public function darkmode($darkmode = null)
-    {
-        if ($darkmode) $this->darkmode = $darkmode;
-        else return $this->darkmode;
     }
 
     public function custom($key, $value = null)
@@ -74,9 +54,7 @@ class Data
         // Set Default Data
         $data = array(
             'title' => $this->title,
-            'current' => $this->current,
-            'logged' => $this->logged,
-            'darkmode' => $this->darkmode,
+            'current' => $this->current
         );
 
         // Merge Custom Data

@@ -8,14 +8,12 @@ use Illuminate\Contracts\View\View;
 
 class Navbar extends Component
 {
-    public $logged;
     public $current;
     /**
      * Create a new component instance.
      */
-    public function __construct( $logged, $current )
+    public function __construct( $current )
     {
-        $this->logged = $logged;
         $this->current = $current;
     }
 

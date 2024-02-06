@@ -7,14 +7,6 @@ export default {
   ],
   theme: {
     extend: {
-        colors: {
-            'navbar-light': '#edf2f7',
-            'navbar-dark': '#2d3748',
-            'sidebar-light': '#edf2f7',
-            'sidebar-dark': '#2d3748',
-            'footer-light': '#ffffff',
-            'footer-dark': '#000000',
-        },
         spacing: {
             'navbar-height': '5rem',
             'footer-height': '5rem',

@@ -20,10 +20,8 @@ class Controller extends BaseController
 
     protected function load($view)
     {
-        if(!$this->data->title('?')) $this->data->title(ucwords(str_replace('.', ' ', $view)));
+        $this->data->title('Title-'.$view);
         $this->data->current($view);
-        $this->data->logged(auth()->check());
-        $this->data->darkmode(session('darkmode'));
         return view($view, $this->data->get());
     }
 }
