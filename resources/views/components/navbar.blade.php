@@ -1,4 +1,4 @@
-<nav class="hidden lg:flex justify-between items-center select-none text-white h-navbar-height xl:px-margin-x-computer lg:px-margin-x-tablet w-full fixed z-40 top-0 bg-neutral-900" id="navbar">
+<nav class="hidden lg:flex justify-between items-center select-none text-white h-navbar-height xl:px-margin-x-computer lg:px-margin-x-tablet w-full fixed z-40 top-0 bg-neutral-800" id="navbar">
 
     <!-- Left Part -->
     <div>
