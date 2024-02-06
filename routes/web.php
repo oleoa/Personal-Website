@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Home;
+use App\Http\Controllers\Pages;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +14,8 @@ use App\Http\Controllers\Home;
 |
 */
 
-Route::get('/', [Home::class, 'index'])->name('home');
+Route::get('/', [Pages::class, 'Home'])->name('home');
+Route::get('/about', [Pages::class, 'About'])->name('about');
+Route::get('/portfolio', [Pages::class, 'Portfolio'])->name('portfolio');
+Route::get('/skills', [Pages::class, 'Skills'])->name('skills');
+Route::get('/contact', [Pages::class, 'Contact'])->name('contact');
