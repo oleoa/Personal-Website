@@ -23,7 +23,7 @@
         <div class="flex justify-between pr-4">
 
             <!-- First item inside here because of the X close button -->
-            <a class="@if($current == 'home') text-blue-400 @endif loaderActivator" href=""><h5>@lang('Bar-Home')</h5></a>
+            <a class="@if($current == 'home') text-blue-400 @endif loaderActivator" href="{{route('home')}}"><h5>@lang('Bar-Home')</h5></a>
 
             <button id="closeSidebar" class="text-white">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

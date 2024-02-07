@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Requests;
 use App\Http\Controllers\Pages;
 
 /*
@@ -19,3 +20,4 @@ Route::get('/about', [Pages::class, 'About'])->name('about');
 Route::get('/portfolio', [Pages::class, 'Portfolio'])->name('portfolio');
 Route::get('/skills', [Pages::class, 'Skills'])->name('skills');
 Route::get('/contact', [Pages::class, 'Contact'])->name('contact');
+Route::post('/contact', [Requests::class, 'Contact'])->name('contact');

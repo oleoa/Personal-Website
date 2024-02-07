@@ -22,7 +22,7 @@
       <x-navbar :current="$current"/>
 
       <!-- Main Content -->
-      <main class="pt-navbar-height xl:px-margin-x-computer lg:px-margin-x-tablet px-margin-x-smartphone bg-neutral-800 row-span-10 text-white min-h-screen" id="main-content">
+      <main class="pt-navbar-height xl:px-margin-x-computer lg:px-margin-x-tablet px-margin-x-smartphone bg-neutral-800 text-white min-h-screen" id="main-content">
 
         @yield('main')
 
