@@ -9,6 +9,13 @@
         </button>
     </div>
 
+    <!-- Logo -->
+    <div class="flex justify-center items-center">
+        <a href="{{route('home')}}">
+            <h1 class="text-3xl italic">Leonardo Abreu</h1>
+        </a>
+    </div>
+
     <!-- Sidebar Itself -->
     <nav id="sidebar" class="bg-neutral-900 text-white h-screen w-44 fixed top-0 left-0 transition-transform duration-300 transform -translate-x-full p-4 text-xl flex flex-col gap-4">
 
@@ -16,7 +23,7 @@
         <div class="flex justify-between pr-4">
 
             <!-- First item inside here because of the X close button -->
-            <a class="@if($current == 'home') text-blue-400 @endif loaderActivator" href=""><h5>@lang('Home')</h5></a>
+            <a class="@if($current == 'home') text-blue-400 @endif loaderActivator" href=""><h5>@lang('Bar-Home')</h5></a>
 
             <button id="closeSidebar" class="text-white">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -27,7 +34,10 @@
         </div>
 
         <!-- Other items -->
-        <a class="@if($current == 'item') text-blue-400 @endif loaderActivator" href=""><h5>@lang('Item')</h5></a>
+        <a href="{{route('about')}}" class="@if($current == 'about') text-blue-400 @endif h-min hover:text-white hover:font-bold">@lang('Bar-About')</a>
+        <a href="{{route('portfolio')}}" class="@if($current == 'portfolio') text-blue-400 @endif h-min hover:text-white hover:font-bold">@lang('Bar-Portfolio')</a>
+        <a href="{{route('skills')}}" class="@if($current == 'skills') text-blue-400 @endif h-min hover:text-white hover:font-bold">@lang('Bar-Skills')</a>
+        <a href="{{route('contact')}}" class="@if($current == 'contact') text-blue-400 @endif h-min hover:text-white hover:font-bold">@lang('Bar-Contact')</a>
 
     </nav>
 
