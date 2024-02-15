@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Helpers\Movies;
 
 class Requests extends Controller
 {
@@ -18,5 +19,17 @@ class Requests extends Controller
         session()->flash('info', 'Success');
         session()->flash('message', 'Your message has been sent!');
         return redirect()->route('contact');
+    }
+
+    public function Movies(Request $request)
+    {
+        $api = new Movies();
+        $movie = [
+            'title' => $request->title,
+            'addedBy' => $request->addedBy
+        ];
+        $api->add($movie);
+        $api->update($request->watched);
+        return redirect()->route('alice');
     }
 }

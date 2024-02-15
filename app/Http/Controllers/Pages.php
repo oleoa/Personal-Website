@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Helpers\Movies;
 
 class Pages extends Controller
 {
@@ -64,6 +65,9 @@ class Pages extends Controller
         $this->data['last']['days'] = $diff_days_2;
         $this->data['last']['months'] = $diff_months_2;
         $this->data['last']['years'] = $diff_years_2;
+
+        $api = new Movies();
+        $this->data['movies'] = $api->get();
 
         return $this->load('alice');
     }
