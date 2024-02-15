@@ -15,6 +15,10 @@ use App\Http\Controllers\Pages;
 |
 */
 
+Route::domain('alicecapelo.leonardoabreu.com', function(){
+    Route::get('/', [Pages::class, 'Alice'])->name('alice');
+});
+
 Route::get('/', [Pages::class, 'Home'])->name('home');
 Route::get('/about', [Pages::class, 'About'])->name('about');
 Route::get('/portfolio', [Pages::class, 'Portfolio'])->name('portfolio');
@@ -23,6 +27,3 @@ Route::get('/contact', [Pages::class, 'Contact'])->name('contact');
 Route::post('/contact', [Requests::class, 'Contact'])->name('contact');
 
 Route::get('/alice', [Pages::class, 'Alice'])->name('aliceSandbox');
-Route::domain('alicecapelo.leonardoabreu.com', function(){
-    Route::get('/', [Pages::class, 'Alice'])->name('alice');
-});
