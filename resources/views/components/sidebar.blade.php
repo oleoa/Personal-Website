@@ -23,7 +23,7 @@
         <div class="flex justify-between pr-4">
 
             <!-- First item inside here because of the X close button -->
-            <a class="@if($current == 'home') text-blue-400 @endif loaderActivator" href="{{route('home')}}"><h5>@lang('Bar-Home')</h5></a>
+            <a class="@if($menu['home']['current']) text-blue-400 @endif loaderActivator" href="{{$menu['home']['route']}}"><h5>@lang($menu['home']['name'])</h5></a>
 
             <button id="closeSidebar" class="text-white">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -34,10 +34,16 @@
         </div>
 
         <!-- Other items -->
-        <a href="{{route('about')}}" class="@if($current == 'about') text-blue-400 @endif h-min hover:text-white hover:font-bold">@lang('Bar-About')</a>
-        <a href="{{route('portfolio')}}" class="@if($current == 'portfolio') text-blue-400 @endif h-min hover:text-white hover:font-bold">@lang('Bar-Portfolio')</a>
-        <a href="{{route('skills')}}" class="@if($current == 'skills') text-blue-400 @endif h-min hover:text-white hover:font-bold">@lang('Bar-Skills')</a>
-        <a href="{{route('contact')}}" class="@if($current == 'contact') text-blue-400 @endif h-min hover:text-white hover:font-bold">@lang('Bar-Contact')</a>
+        @foreach ($menu as $item)
+
+            <!-- Skips the first item -->
+            @if($loop->first)
+                @continue
+            @endif
+
+            <a href="{{$item['route']}}" class="@if($item['current']) text-blue-400 @endif h-min hover:text-white hover:font-bold">@lang($item['name'])</a>
+
+        @endforeach
 
     </nav>
 

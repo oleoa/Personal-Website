@@ -1,11 +1,14 @@
 {
     "Title-home": "Home",
+    "Title-about": "About",
+    "Title-portfolio": "Portfolio",
+    "Title-skills": "Skills",
+    "Title-contact": "Contact",
+    "Title-alice": "Relationship",
 
-    "Bar-Home": "Home",
-    "Bar-About": "About",
-    "Bar-Portfolio": "Portfolio",
-    "Bar-Skills": "Skills",
-    "Bar-Contact": "Contact",
-    
-    "Home Page": "Home Page"
+    "Bar-home": "Home",
+    "Bar-about": "About",
+    "Bar-portfolio": "Portfolio",
+    "Bar-skills": "Skills",
+    "Bar-contact": "Contact"
 }
