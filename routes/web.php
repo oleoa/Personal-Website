@@ -23,6 +23,6 @@ Route::get('/contact', [Pages::class, 'Contact'])->name('contact');
 Route::post('/contact', [Requests::class, 'Contact'])->name('contact');
 
 Route::get('/alice', [Pages::class, 'Alice'])->name('aliceSandbox');
-Route::domain('alice.leonardoabreu.com', function(){
+Route::domain('alicecapelo.leonardoabreu.com', function(){
     Route::get('/', [Pages::class, 'Alice'])->name('alice');
 });
