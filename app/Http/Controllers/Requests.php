@@ -15,8 +15,8 @@ class Requests extends Controller
             'message' => 'required'
         ]);
 
-        session(['info' => 'Success']);
-        session(['message' => 'Your message has been sent!']);
+        session()->flash('info', 'Success');
+        session()->flash('message', 'Your message has been sent!');
         return redirect()->route('contact');
     }
 }
