@@ -15,7 +15,7 @@ use App\Http\Controllers\Pages;
 |
 */
 
-Route::domain('alicecapelo.leonardoabreu.com', function(){
+Route::domain('alicecapelo.leonardoabreu.com')->group(function(){
     Route::get('/', [Pages::class, 'Alice'])->name('alice');
 });
 

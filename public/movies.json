@@ -1,0 +1,12 @@
+{
+    "1": {
+        "name": "Shrek 2",
+        "watched": "true",
+        "addedBy": "Leonardo"
+    },
+    "2": {
+        "name": "Brave",
+        "watched": "true",
+        "addedBy": "Alice"
+    }
+}
