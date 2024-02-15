@@ -36,7 +36,7 @@
             </div>
             
             <!-- Movies to watch -->
-            <form action="{{route('movie')}}" class="bg-gradient-to-r from-green-800 to-green-600 rounded-3xl p-4 col-span-2 h-min" method="POST">
+            <form action="{{route('movie')}}" class="bg-gradient-to-r from-green-800 to-green-600 rounded-3xl p-4 col-span-2 h-min relative" method="POST">
                 @csrf
 
                 <!-- Movies -->
@@ -56,10 +56,6 @@
                             @endforeach
                         @endif
 
-                    </div>
-
-                    <div>
-                        <button type="submit" class="rounded-xl px-4 py-2 bg-neutral-700">Guardar</button>
                     </div>
 
                 </div>
