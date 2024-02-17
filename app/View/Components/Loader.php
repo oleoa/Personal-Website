@@ -21,6 +21,6 @@ class Loader extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.personal.loader');
+        return view('components.loader');
     }
 }

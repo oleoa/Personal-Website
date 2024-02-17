@@ -1,4 +1,4 @@
-@extends('layouts.personal.main')
+@extends('layouts.main')
 @section('main')
 
     <div class="w-full p-4 gap-4 flex flex-col">

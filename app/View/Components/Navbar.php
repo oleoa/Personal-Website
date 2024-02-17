@@ -23,6 +23,6 @@ class Navbar extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.personal.navbar');
+        return view('components.navbar');
     }
 }

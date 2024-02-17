@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Personal;
+namespace App\Http\Controllers;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -53,6 +53,6 @@ class Controller extends BaseController
         $this->data['title'] = 'Title-'.$view;
         $this->data['current'] = $view;
         $this->data['menu'] = $this->menu($view);
-        return view('personal.'.$view, $this->data);
+        return view($view, $this->data);
     }
 }

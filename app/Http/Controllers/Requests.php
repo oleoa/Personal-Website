@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Personal;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Personal\Controller;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Helpers\Movies;
 
