@@ -32,7 +32,7 @@ class Requests extends Controller
         if($request->isMethod('get'))
         {
             $api = new Movies();
-           return $api->get();
+            return $api->get();
         }
         
         $api = new Movies();

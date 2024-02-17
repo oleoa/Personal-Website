@@ -20,7 +20,9 @@ Route::domain('alicecapelo.leonardoabreu.com')->group(function(){
     Route::get('/', [Pages::class, 'Alice'])->name('alice');
 
     Route::get('/movies', [Requests::class, 'Movies'])->name('movie.get');
+
     Route::post('/movies', [Requests::class, 'Movies'])->name('movie.save');
+    
     Route::delete('/movies', [Requests::class, 'Movies'])->name('movie.delete');
     
 });
