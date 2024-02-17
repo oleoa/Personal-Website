@@ -4,21 +4,20 @@
 
 @layer base {
 
-  h1 { @apply text-3xl; }
+    h1 { 
+        @apply text-3xl; 
+    }
 
-  h2 { @apply text-2xl; }
+    h2 { 
+        @apply text-2xl;
+    }
 
-  h3 { @apply text-xl; }
+    h3 { 
+        @apply text-xl;
+    }
 
-  h4 { @apply text-lg; }
-  
-}
+    h4 { 
+        @apply text-lg;
+    }
 
-::placeholder {
-  color: red;
-  opacity: 1; /* Firefox */
-}
-
-::-ms-input-placeholder { /* Edge 12 -18 */
-  color: red;
 }
