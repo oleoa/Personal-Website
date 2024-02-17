@@ -29,6 +29,11 @@ class Requests extends Controller
             $api->delete($request->id);
             return redirect()->route('alice');
         }
+        if($request->isMethod('get'))
+        {
+            $api = new Movies();
+           return $api->get();
+        }
         
         $api = new Movies();
         $movie = [
@@ -39,4 +44,5 @@ class Requests extends Controller
         $api->update($request->watched);
         return redirect()->route('alice');
     }
+
 }
