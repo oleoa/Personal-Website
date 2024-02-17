@@ -39,7 +39,6 @@ Route::domain('leonardoabreu.com')->group(function(){
     
 });
 
-/*
 Route::get('/', [Pages::class, 'Home'])->name('home');
 
 Route::get('/about', [Pages::class, 'About'])->name('about');
@@ -53,5 +52,6 @@ Route::get('/contact', [Pages::class, 'Contact'])->name('contact');
 Route::post('/contact', [Requests::class, 'Contact'])->name('contact');
 
 Route::get('/alice', [Pages::class, 'Alice'])->name('alice');
-Route::post('/movies', [Requests::class, 'Movies'])->name('movie');
-*/
+
+Route::post('/movies', [Requests::class, 'Movies'])->name('movie.save');
+Route::delete('/movies', [Requests::class, 'Movies'])->name('movie.delete');

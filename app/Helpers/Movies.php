@@ -35,6 +35,7 @@ class Movies
 
     public function update($watched)
     {
+        if(!$watched) return;
         foreach($this->data_array as $key => $movie)
             if(in_array($movie['id'], $watched))
                 $this->data_array[$key]['watched'] = true;

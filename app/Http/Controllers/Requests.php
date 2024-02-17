@@ -23,6 +23,13 @@ class Requests extends Controller
 
     public function Movies(Request $request)
     {
+        if($request->isMethod('delete'))
+        {
+            $api = new Movies();
+            $api->delete($request->id);
+            return redirect()->route('alice');
+        }
+        
         $api = new Movies();
         $movie = [
             'title' => $request->title,
