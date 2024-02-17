@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Requests;
+use App\Http\Controllers\Library;
 use App\Http\Controllers\Pages;
 
 /*
@@ -43,6 +44,16 @@ Route::domain('leonardoabreu.com')->group(function(){
     
 });
 
+Route::domain('api.leonardoabreu.com')->group(function(){
+    
+});
+
+Route::domain('library.leonardoabreu.com')->group(function(){
+    
+    Route::get('/', [Library::class, 'index'])->name('library');
+    
+});
+
 Route::get('/', [Pages::class, 'Home'])->name('home');
 Route::get('/about', [Pages::class, 'About'])->name('about');
 Route::get('/portfolio', [Pages::class, 'Portfolio'])->name('portfolio');
@@ -53,3 +64,4 @@ Route::get('/alice', [Pages::class, 'Alice'])->name('alice');
 Route::get('/movies', [Requests::class, 'Movies'])->name('movie.get');
 Route::post('/movies', [Requests::class, 'Movies'])->name('movie.save');
 Route::delete('/movies', [Requests::class, 'Movies'])->name('movie.delete');
+Route::get('/library', [Library::class, 'index'])->name('librarySandbox');
