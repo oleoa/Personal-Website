@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.personal.main')
 @section('main')
     <div class="grid lg:grid-cols-3 py-4 lg:gap-12 gap-4">
         <div class="lg:col-span-2 flex flex-col gap-4">

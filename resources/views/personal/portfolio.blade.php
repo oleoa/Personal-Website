@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.personal.main')
 @section('main')
     
     <div class="grid gap-4 py-4">

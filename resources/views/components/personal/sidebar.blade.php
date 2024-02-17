@@ -11,7 +11,7 @@
 
     <!-- Logo -->
     <div class="flex justify-center items-center">
-        <a href="{{route('home')}}">
+        <a href="{{route('home')}}" class="loaderActivator">
             <h1 class="text-3xl italic">Leonardo Abreu</h1>
         </a>
     </div>
@@ -23,7 +23,7 @@
         <div class="flex justify-between pr-4">
 
             <!-- First item inside here because of the X close button -->
-            <a class="@if($menu['home']['current']) text-blue-400 @endif loaderActivator" href="{{$menu['home']['route']}}"><h5>@lang($menu['home']['name'])</h5></a>
+            <a class="@if($menu['home']['current']) text-blue-400 @endif loaderActivator" href="{{$menu['home']['route']}} loaderActivator"><h5>@lang($menu['home']['name'])</h5></a>
 
             <button id="closeSidebar" class="text-white">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -41,7 +41,7 @@
                 @continue
             @endif
 
-            <a href="{{$item['route']}}" class="@if($item['current']) text-blue-400 @endif h-min hover:text-white hover:font-bold">@lang($item['name'])</a>
+            <a href="{{$item['route']}}" class="@if($item['current']) text-blue-400 @endif h-min hover:text-white hover:font-bold loaderActivator">@lang($item['name'])</a>
 
         @endforeach
 

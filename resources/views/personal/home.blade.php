@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.personal.main')
 @section('main')
     <div class="py-4">
         <div class="bg-gradient-to-r from-blue-900 to-blue-500 backdrop-blur-3xl rounded-3xl lg:h-80 grid lg:grid-cols-2 px-4 lg:pt-0 pt-4">

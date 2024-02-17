@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Requests;
-use App\Http\Controllers\Pages;
+use App\Http\Controllers\Personal\Requests;
+use App\Http\Controllers\Personal\Pages;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,20 +43,19 @@ Route::domain('leonardoabreu.com')->group(function(){
     
 });
 
+Route::domain('tripmaster.leonardoabreu.com')->group(function(){
+
+    
+    
+});
+
 Route::get('/', [Pages::class, 'Home'])->name('home');
-
 Route::get('/about', [Pages::class, 'About'])->name('about');
-
 Route::get('/portfolio', [Pages::class, 'Portfolio'])->name('portfolio');
-
 Route::get('/skills', [Pages::class, 'Skills'])->name('skills');
-
 Route::get('/contact', [Pages::class, 'Contact'])->name('contact');
-
 Route::post('/contact', [Requests::class, 'Contact'])->name('contact');
-
 Route::get('/alice', [Pages::class, 'Alice'])->name('alice');
-
 Route::get('/movies', [Requests::class, 'Movies'])->name('movie.get');
 Route::post('/movies', [Requests::class, 'Movies'])->name('movie.save');
 Route::delete('/movies', [Requests::class, 'Movies'])->name('movie.delete');
