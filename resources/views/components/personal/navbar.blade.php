@@ -2,7 +2,7 @@
 
     @foreach ($menu as $item)
 
-        <a href="{{$item['route']}}" class="@if($item['current']) text-blue-400 @endif h-min hover:text-white hover:font-bold">@lang($item['name'])</a>
+        <a href="{{$item['route']}}" class="@if($item['current']) text-blue-400 @endif h-min hover:text-white hover:font-bold loaderActivator">@lang($item['name'])</a>
 
     @endforeach
 

@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Requests;
-use App\Http\Controllers\Pages;
+use App\Http\Controllers\Personal\Requests;
+use App\Http\Controllers\Personal\Pages;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +40,12 @@ Route::domain('leonardoabreu.com')->group(function(){
     Route::get('/contact', [Pages::class, 'Contact'])->name('contact');
 
     Route::post('/contact', [Requests::class, 'Contact'])->name('contact');
+    
+});
+
+Route::domain('tripmaster.leonardoabreu.com')->group(function(){
+
+    
     
 });
 

@@ -23,6 +23,6 @@ class Sidebar extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.sidebar');
+        return view('components.personal.sidebar');
     }
 }

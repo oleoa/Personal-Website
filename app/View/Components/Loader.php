@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\View\Component;
 use Illuminate\Contracts\View\View;
 
-class Footer extends Component
+class Loader extends Component
 {
     /**
      * Create a new component instance.
@@ -21,6 +21,6 @@ class Footer extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.footer');
+        return view('components.personal.loader');
     }
 }
