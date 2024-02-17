@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Helpers\Portfolio;
 use App\Helpers\Movies;
 
 class Pages extends Controller
@@ -20,6 +21,9 @@ class Pages extends Controller
 
     public function Portfolio()
     {
+        $api = new Portfolio();
+        $projects = $api->listProjects();
+        $this->data['projects'] = $projects;
         return $this->load('portfolio');
     }
 

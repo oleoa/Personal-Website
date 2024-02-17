@@ -20,4 +20,8 @@
         @apply text-lg;
     }
 
+    p { 
+        @apply text-base text-justify;
+    }
+
 }
