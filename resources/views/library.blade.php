@@ -12,7 +12,7 @@
 
             <!-- Example -->
             <div class="bg-neutral-500 p-4 rounded-xl w-full">
-                <iframe src="https://library.leonardoabreu.com/sidebar" frameborder="0" class="w-full h-full"></iframe>
+                <iframe src="{{route('sidebar')}}" frameborder="0" class="w-full h-full"></iframe>
             </div>
 
             <!-- Code -->

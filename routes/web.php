@@ -16,6 +16,7 @@ use App\Http\Controllers\Pages;
 |
 */
 
+/*
 Route::domain('alicecapelo.leonardoabreu.com')->group(function(){
     
     Route::get('/', [Pages::class, 'Alice'])->name('alice');
@@ -27,6 +28,7 @@ Route::domain('alicecapelo.leonardoabreu.com')->group(function(){
     Route::delete('/movies', [Requests::class, 'Movies'])->name('movie.delete');
     
 });
+*/
 
 Route::domain('api.leonardoabreu.com')->group(function(){
     
@@ -38,12 +40,15 @@ Route::get('/about', [Pages::class, 'About'])->name('about');
 
 Route::get('/portfolio', [Pages::class, 'Portfolio'])->name('portfolio');
 
+Route::get('/library', [Library::class, 'index'])->name('library');
+Route::get('/sidebar', [Library::class, 'sidebar'])->name('sidebar');
+
 Route::get('/contact', [Pages::class, 'Contact'])->name('contact');
 Route::post('/contact', [Requests::class, 'Contact'])->name('contact');
 
-Route::get('/library', [Library::class, 'index'])->name('library');
-
+/*
 Route::get('/alice', [Pages::class, 'Alice'])->name('alice');
 Route::get('/movies', [Requests::class, 'Movies'])->name('movie.get');
 Route::post('/movies', [Requests::class, 'Movies'])->name('movie.save');
 Route::delete('/movies', [Requests::class, 'Movies'])->name('movie.delete');
+*/
