@@ -24,7 +24,7 @@
                 </div>
 
                 <code class="">
-                    @include('codes.sidebar')                    
+                    <iframe src="https://library.leonardoabreu.com/code/sidebar" frameborder="0" class="w-full h-full"></iframe>
                 </code>
 
             </div>
