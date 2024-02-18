@@ -20,7 +20,7 @@
             <div class="flex justify-between pr-4">
 
                 <!-- First item inside here because of the X close button -->
-                <a class="@if('currentRoute' == 'home') text-blue-400 @endif loaderActivator" href="home"><h5>@lang('Home')</h5></a>
+                <a class="@if('currentRoute' == 'home') text-blue-400 @endif" href=""><h5>@lang('Home')</h5></a>
 
                 <button id="closeSidebar" class="text-white">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -30,11 +30,10 @@
 
             </div>
 
-            <a href="about" class="@if('currentRoute' == 'about') text-blue-400 @endif h-min hover:text-white hover:font-bold">@lang('About Us')</a>
+            <a href="" class="@if('currentRoute' == 'about') text-blue-400 @endif h-min hover:text-white hover:font-bold">@lang('About Us')</a>
 
         </nav>
 
     </div>
-
 
 @endsection

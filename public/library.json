@@ -1,0 +1,10 @@
+{
+    "sidebar": {
+        "title": "Sidebar",
+        "route": "sidebar"
+    },
+    "loader": {
+        "title": "Loader",
+        "route": "loader"
+    }
+}
