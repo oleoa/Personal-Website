@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('main')
 
-    <div class="grid grid-cols-2">
+    <div class="grid xl:grid-cols-2">
 
         <p>
             Hello, my name is Leonardo Abreu. I was born and lived in Brazil for 14 years, then I moved to Portugal, where I finished school and professionally trained as a programmer. Today, I am 18 years old and primarily work in my field. This website is a place for me to store my projects, try new things, and tell my story.
@@ -27,7 +27,7 @@
             I love to travel and dream of one day seeing the whole world, experiencing all cultures, exploring nature, climbing, camping in remote places, and embarking on all kinds of nature-related adventures.
         </p>
         <img src="{{asset('/img/personal.jpg')}}" alt="">
-        
+
     </div>
 
 @endsection
