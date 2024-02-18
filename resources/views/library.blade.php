@@ -1,7 +1,7 @@
-@extends('layouts.simple')
+@extends('layouts.main')
 @section('main')
 
-    <div class="py-4 xl:px-margin-x-computer px-margin-x-smartphone flex flex-col gap-4">
+    <div class="py-4 flex flex-col gap-4">
 
         <h1>Library</h1>
 

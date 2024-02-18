@@ -35,10 +35,10 @@ class Controller extends BaseController
                 'route' => route('portfolio'),
                 'current' => $current == 'portfolio',
             ],
-            'skills' => [
-                'name' => 'Bar-skills',
-                'route' => route('skills'),
-                'current' => $current == 'skills',
+            'library' => [
+                'name' => 'Bar-library',
+                'route' => route('library'),
+                'current' => $current == 'library',
             ],
             'contact' => [
                 'name' => 'Bar-contact',
