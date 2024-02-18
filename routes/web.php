@@ -30,10 +30,6 @@ Route::domain('alicecapelo.leonardoabreu.com')->group(function(){
 });
 */
 
-Route::domain('api.leonardoabreu.com')->group(function(){
-    
-});
-
 Route::get('/', [Pages::class, 'Home'])->name('home');
 
 Route::get('/about', [Pages::class, 'About'])->name('about');

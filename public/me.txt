@@ -1,0 +1,9 @@
+Olá, meu nome é Leonardo Abreu, eu nasci e vivi por 14 anos no Brasil, depois me mudei para Portugal, onde terminei a escola e me formei profissionalmente como programador. Hoje, tenho 18 anos de idade e trabalho atuando principalmente na minha área. Esse website é um lugar para eu armazenar meus projetos, experimentar coisas novas e contar minha história.
+
+Na área de programação, sou mais especializado no front-end, mas estou aberto à aprender outras áreas, já trabalhei com as frameworks Laravel, CodeIgniter e Nextjs, conheço e sei usar a biblioteca de javascript React e (assim como nesse projeto) costumo usar Tailwind como biblioteca de css.
+
+Eu vou ao ginásio, já tenho mais de um ano de treino, sou natural e pretendo ter um corpo melhor do que tenho hoje, mas sem exageiros para um vida onde possa focar em outros aspéctos como trabalho e relacionamentos.
+
+Gosto muito de escutar música, minhas bandas favoritas são Pink Floyd, Tame Impala, The Weeknd, Marillion, Tyler, The Creator, Kanye West e outros desses géneros. Estou quase sempre de fones de ouvido ouvindo algum desses.
+
+Amo viajar, e tenho o sonho de um dia conhecer o mundo todo, conhecer todas as culturas, explorar a natureza, fazer escaladas, acampar em lugares afastados e fazer todo tipo de aventura com relação a natureza.

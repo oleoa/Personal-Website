@@ -26,7 +26,7 @@
                 </div>
                 
                 <div class="flex items-center justify-center">
-                    <img src="{{asset('/img/'.$p['img'])}}" alt="Tripmaster Image" class="rounded">
+                    <img src="{{asset('/img/'.$p['img'])}}" alt="{{$p['title']}} Image" class="rounded">
                 </div>
 
             </div>
