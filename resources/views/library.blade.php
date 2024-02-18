@@ -8,7 +8,7 @@
         <h2>All simple components that are required in most projects with a simple css and js</h2>
         
         <!-- Row -->
-        <div class="grid grid-cols-2 gap-4 bg-neutral-600 p-4 rounded-xl h-96">
+        <div class="grid grid-cols-3 gap-4 bg-neutral-700 p-4 rounded-xl h-96">
 
             <!-- Example -->
             <div class="bg-neutral-500 p-4 rounded-xl w-full">
@@ -16,16 +16,17 @@
             </div>
 
             <!-- Code -->
-            <div class="bg-neutral-500 rounded-xl overflow-y-scroll">
-                
-                <div class="w-full grid grid-cols-2 bg-neutral-400 rounded-t-xl">
-                    <button class="hover:bg-neutral-300 py-4 rounded-tl-xl">HTML</button>
-                    <button class="hover:bg-neutral-300 py-4 rounded-tr-xl">JS</button>
-                </div>
+            <div class="bg-neutral-600 rounded-xl p-4 col-span-2 relative">
 
-                <code class="">
-                    <iframe src="https://library.leonardoabreu.com/code/sidebar" frameborder="0" class="w-full h-full"></iframe>
-                </code>
+                <div class="w-full grid grid-cols-2 bg-neutral-600 absolute top-0 left-0 h-16 rounded-t-xl">
+                    <button class="hover:bg-neutral-500 bg-neutral-500 py-4 rounded-tl-xl border-2 border-r-0" id="html">HTML</button>
+                    <button class="hover:bg-neutral-500 py-4 rounded-tr-xl border-2" id="js">JS</button>
+                </div>
+            
+                <div class="pt-16 h-full">
+                    <iframe src="{{asset('/codes/sidebar-html.txt')}}" frameborder="0" class="w-full h-full" id="html-iframe"></iframe>
+                    <iframe src="{{asset('/codes/sidebar-js.txt')}}" frameborder="0" class="w-full h-full hidden" id="js-iframe"></iframe>
+                </div>
 
             </div>
 

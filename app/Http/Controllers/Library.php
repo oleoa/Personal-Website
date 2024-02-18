@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class Library extends Controller
 {
@@ -15,10 +16,5 @@ class Library extends Controller
     public function sidebar()
     {
         return $this->load('sidebar');
-    }
-
-    public function code($view)
-    {
-        return $this->load('codes.'.$view);
     }
 }
