@@ -1,3 +1,4 @@
+<!-- Navbar -->
 <div class="text-white flex lg:hidden h-navbar-height top-0 fixed w-full justify-center items-center bg-neutral-900 z-50">
 
     <!-- Garfo -->
@@ -23,7 +24,7 @@
         <div class="flex justify-between pr-4">
 
             <!-- First item inside here because of the X close button -->
-            <a class="@if($menu['home']['current']) text-blue-400 @endif loaderActivator" href="{{$menu['home']['route']}} loaderActivator"><h5>@lang($menu['home']['name'])</h5></a>
+            <a class="@if($menu['home']['current']) text-blue-400 @endif loaderActivator" href="{{$menu['home']['route']}}"><h5>@lang($menu['home']['name'])</h5></a>
 
             <button id="closeSidebar" class="text-white">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

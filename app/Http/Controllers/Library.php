@@ -11,4 +11,9 @@ class Library extends Controller
     {
         return $this->load('library');
     }
+
+    public function sidebar()
+    {
+        return $this->load('sidebar');
+    }
 }

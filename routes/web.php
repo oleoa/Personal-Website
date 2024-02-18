@@ -65,3 +65,4 @@ Route::get('/movies', [Requests::class, 'Movies'])->name('movie.get');
 Route::post('/movies', [Requests::class, 'Movies'])->name('movie.save');
 Route::delete('/movies', [Requests::class, 'Movies'])->name('movie.delete');
 Route::get('/library', [Library::class, 'index'])->name('librarySandbox');
+Route::get('/sidebar', [Library::class, 'sidebar'])->name('librarySidebarSandbox');
