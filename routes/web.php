@@ -52,8 +52,11 @@ Route::domain('library.leonardoabreu.com')->group(function(){
     
     Route::get('/', [Library::class, 'index'])->name('library');
     
+    Route::get('/sidebar', [Library::class, 'sidebar'])->name('sidebar');
+    
 });
 
+/*
 Route::get('/', [Pages::class, 'Home'])->name('home');
 Route::get('/about', [Pages::class, 'About'])->name('about');
 Route::get('/portfolio', [Pages::class, 'Portfolio'])->name('portfolio');
@@ -66,3 +69,4 @@ Route::post('/movies', [Requests::class, 'Movies'])->name('movie.save');
 Route::delete('/movies', [Requests::class, 'Movies'])->name('movie.delete');
 Route::get('/library', [Library::class, 'index'])->name('librarySandbox');
 Route::get('/sidebar', [Library::class, 'sidebar'])->name('librarySidebarSandbox');
+*/
