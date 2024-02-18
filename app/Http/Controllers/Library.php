@@ -24,4 +24,9 @@ class Library extends Controller
     {
         return $this->load('loader');
     }
+
+    public function faq()
+    {
+        return $this->load('faq');
+    }
 }

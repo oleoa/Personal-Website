@@ -3,6 +3,10 @@
         "title": "Sidebar",
         "route": "sidebar"
     },
+    "faq": {
+        "title": "FAQ",
+        "route": "faq"
+    },
     "loader": {
         "title": "Loader",
         "route": "loader"
