@@ -31,6 +31,7 @@ Route::domain('alicecapelo.leonardoabreu.com')->group(function(){
 */
 
 Route::get('/', [Pages::class, 'Home'])->name('home');
+Route::get('/41', [Pages::class, 'area41'])->name('41');
 
 Route::get('/about', [Pages::class, 'About'])->name('about');
 
@@ -43,6 +44,8 @@ Route::get('/faq', [Library::class, 'faq'])->name('faq');
 
 Route::get('/contact', [Pages::class, 'Contact'])->name('contact');
 Route::post('/contact', [Requests::class, 'Contact'])->name('contact');
+
+Route::get('/instagram', [Pages::class, 'instagram'])->name('instagram');
 
 /*
 Route::get('/alice', [Pages::class, 'Alice'])->name('alice');

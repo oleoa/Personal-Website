@@ -3,9 +3,12 @@
 
     <div class="grid xl:grid-cols-2">
 
-        <p>
-            Hello, my name is Leonardo Abreu. I was born and lived in Brazil for 14 years, then I moved to Portugal, where I finished school and professionally trained as a programmer. Today, I am 18 years old and primarily work in my field. This website is a place for me to store my projects, try new things, and tell my story.
-        </p>
+        <div>
+            <h1>Who am I</h1>
+            <p>
+                Hello, my name is Leonardo Abreu. I was born and lived in Brazil for 14 years, then I moved to Portugal, where I finished school and professionally trained as a programmer. Today, I am 18 years old and primarily work in my field. This website is a place for me to store my projects, try new things, and tell my story.
+            </p>
+        </div>
         <img src="{{asset('/img/personal.jpg')}}" alt="">
 
         <img src="{{asset('/img/personal.jpg')}}" alt="">

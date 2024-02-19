@@ -14,6 +14,11 @@ class Pages extends Controller
         return $this->load('home');
     }
 
+    public function area41()
+    {
+        return $this->load('41');
+    }
+
     public function About()
     {
         return $this->load('about');
