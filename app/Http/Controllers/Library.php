@@ -29,4 +29,9 @@ class Library extends Controller
     {
         return $this->load('faq');
     }
+
+    public function carousel()
+    {
+        return $this->load('carousel');
+    }
 }

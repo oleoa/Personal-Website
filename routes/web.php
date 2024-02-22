@@ -41,6 +41,7 @@ Route::get('/library', [Library::class, 'index'])->name('library');
 Route::get('/sidebar', [Library::class, 'sidebar'])->name('sidebar');
 Route::get('/loader', [Library::class, 'loader'])->name('loader');
 Route::get('/faq', [Library::class, 'faq'])->name('faq');
+Route::get('/carousel', [Library::class, 'carousel'])->name('carousel');
 
 Route::get('/contact', [Pages::class, 'Contact'])->name('contact');
 Route::post('/contact', [Requests::class, 'Contact'])->name('contact');
