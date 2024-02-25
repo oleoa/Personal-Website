@@ -31,7 +31,6 @@ Route::domain('alicecapelo.leonardoabreu.com')->group(function(){
 */
 
 Route::get('/', [Pages::class, 'Home'])->name('home');
-Route::get('/41', [Pages::class, 'area41'])->name('41');
 
 Route::get('/about', [Pages::class, 'About'])->name('about');
 

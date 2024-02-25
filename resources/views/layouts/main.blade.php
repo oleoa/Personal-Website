@@ -24,16 +24,12 @@
 
   <body class="min-h-screen grid grid-rows-1 bg-neutral-800 text-white alice-regular">
 
-    <!-- Loading -->
     <x-loader/>
 
-    <!-- Sidebar -->
     <x-sidebar :menu="$menu" :current="$current"/>
     
-    <!-- Navbar -->
     <x-navbar :menu="$menu" :current="$current"/>
 
-    <!-- Main Content -->
     <main class="pt-20 xl:px-64 px-4 row-span-1">
 
       @yield('main')
