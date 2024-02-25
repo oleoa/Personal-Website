@@ -8,30 +8,30 @@ use Illuminate\Support\Facades\File;
 
 class Library extends Controller
 {
-    public function index()
-    {
-        $library = json_decode(File::get(public_path('library.json')), true);
-        $this->data['library'] = $library;
-        return $this->load('library');
-    }
+  public function index(Request $request)
+  {
+    $library = json_decode(File::get(public_path('library.json')), true);
+    $this->data['library'] = $library;
+    return $this->load('library', $request);
+  }
 
-    public function sidebar()
-    {
-        return $this->load('sidebar');
-    }
+  public function sidebar(Request $request)
+  {
+    return $this->load('library.sidebar', $request);
+  }
 
-    public function loader()
-    {
-        return $this->load('loader');
-    }
+  public function loader(Request $request)
+  {
+    return $this->load('library.loader', $request);
+  }
 
-    public function faq()
-    {
-        return $this->load('faq');
-    }
+  public function faq(Request $request)
+  {
+    return $this->load('library.faq', $request);
+  }
 
-    public function carousel()
-    {
-        return $this->load('carousel');
-    }
+  public function carousel(Request $request)
+  {
+    return $this->load('library.carousel', $request);
+  }
 }

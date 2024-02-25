@@ -8,51 +8,51 @@ use Illuminate\Routing\Controller as BaseController;
 
 class Controller extends BaseController
 {
-    use AuthorizesRequests, ValidatesRequests;
+  use AuthorizesRequests, ValidatesRequests;
 
-    protected $data;
+  protected $data;
 
-    public function __construct()
-    {
-        $this->data = array();
-    }
+  public function __construct()
+  {
+    $this->data = array();
+  }
 
-    private function menu($current)
-    {
-        return [
-            'home' => [
-                'name' => 'Bar-home',
-                'route' => route('home'),
-                'current' => $current == 'home',
-            ],
-            'about' => [
-                'name' => 'Bar-about',
-                'route' => route('about'),
-                'current' => $current == 'about',
-            ],
-            'portfolio' => [
-                'name' => 'Bar-portfolio',
-                'route' => route('portfolio'),
-                'current' => $current == 'portfolio',
-            ],
-            'library' => [
-                'name' => 'Bar-library',
-                'route' => route('library'),
-                'current' => $current == 'library',
-            ],
-            'contact' => [
-                'name' => 'Bar-contact',
-                'route' => route('contact'),
-                'current' => $current == 'contact',
-            ]
-        ];
-    }
+  private function menu($current)
+  {
+    return [
+      'home' => [
+        'name' => 'Bar-home',
+        'route' => route('home'),
+        'current' => $current == 'home',
+      ],
+      'about' => [
+        'name' => 'Bar-about',
+        'route' => route('about'),
+        'current' => $current == 'about',
+      ],
+      'portfolio' => [
+        'name' => 'Bar-portfolio',
+        'route' => route('portfolio'),
+        'current' => $current == 'portfolio',
+      ],
+      'library' => [
+        'name' => 'Bar-library',
+        'route' => route('library'),
+        'current' => $current == 'library',
+      ],
+      'contact' => [
+        'name' => 'Bar-contact',
+        'route' => route('contact'),
+        'current' => $current == 'contact',
+      ]
+    ];
+  }
 
-    protected function load($view)
-    {
-        $this->data['title'] = 'Title-'.$view;
-        $this->data['current'] = $view;
-        $this->data['menu'] = $this->menu($view);
-        return view($view, $this->data);
-    }
+  protected function load($view, $request)
+  {
+    $this->data['title'] = 'Title-'.$view;
+    $this->data['current'] = $request->path();
+    $this->data['menu'] = $this->menu($view);
+    return view($view, $this->data);
+  }
 }
