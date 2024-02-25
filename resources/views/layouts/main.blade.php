@@ -2,32 +2,44 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
   <head>
+
+    <!-- Meta Tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Leonardo Abreu Personal Website">
     <meta name="author" content="Leonardo Abreu de Paulo">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+
+    <!-- Css and JS -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    <!-- Title -->
     <title>@lang($title)</title>
+
   </head>
 
-    <body class="min-h-screen grid grid-rows-1">
+  <body class="min-h-screen grid grid-rows-1 bg-neutral-800 text-white alice-regular">
 
-        <!-- Loading -->
-        <x-loader/>
+    <!-- Loading -->
+    <x-loader/>
 
-        <!-- Sidebar -->
-        <x-sidebar :menu="$menu"/>
-        
-        <!-- Navbar -->
-        <x-navbar :menu="$menu"/>
+    <!-- Sidebar -->
+    <x-sidebar :menu="$menu" :current="$current"/>
+    
+    <!-- Navbar -->
+    <x-navbar :menu="$menu" :current="$current"/>
 
-        <!-- Main Content -->
-        <main class="pt-navbar-height xl:px-margin-x-computer lg:px-margin-x-tablet px-margin-x-smartphone bg-neutral-800 text-white row-span-1" id="main-content">
+    <!-- Main Content -->
+    <main class="pt-20 xl:px-64 px-4 row-span-1">
 
-            @yield('main')
+      @yield('main')
 
-        </main>
+    </main>
 
-    </body>
+  </body>
 
 </html>

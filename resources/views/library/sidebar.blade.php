@@ -1,4 +1,4 @@
-@extends('layouts.simple')
+@extends('layouts.library')
 @section('main')
 
     <!-- Navbar -->

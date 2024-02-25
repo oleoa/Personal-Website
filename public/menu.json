@@ -1,0 +1,22 @@
+{
+  "home": {
+    "title": "Home",
+    "route": "home"
+  },
+  "about": {
+    "title": "About",
+    "route": "about"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "route": "portfolio"
+  },
+  "library": {
+    "title": "Library",
+    "route": "library"
+  },
+  "contact": {
+    "title": "Contact",
+    "route": "contact"
+  }
+}

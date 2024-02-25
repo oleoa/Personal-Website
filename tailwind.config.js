@@ -7,16 +7,9 @@ export default {
   ],
   theme: {
     extend: {
-        spacing: {
-            'navbar-height': '5rem',
-            'footer-height': '5rem',
-            'margin-x-computer': '16rem',
-            'margin-x-tablet': '8rem',
-            'margin-x-smartphone': '1rem',
-          },
-          animation: {
-            'loader': 'spin 2s linear infinite',
-          },
+      animation: {
+        'loader': 'spin 2s linear infinite',
+      },
     },
   },
   plugins: [],

@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<div class="text-white flex lg:hidden h-navbar-height top-0 fixed w-full justify-center items-center bg-neutral-900 z-50">
+<div class="text-white flex xl:hidden h-navbar-height top-0 fixed w-full justify-center items-center bg-neutral-900 z-50">
 
     <!-- Garfo -->
     <div class="left-0 top-0 fixed flex justify-center items-center h-navbar-height pl-4">

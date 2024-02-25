@@ -1,4 +1,4 @@
-@extends('layouts.simple')
+@extends('layouts.library')
 @section('main')
 
     <div class="xl:px-margin px-4 text-white flex flex-col gap-2 p-4">

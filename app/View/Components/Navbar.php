@@ -8,21 +8,23 @@ use Illuminate\Contracts\View\View;
 
 class Navbar extends Component
 {
-    public $menu;
+  public $menu;
+  public $current;
 
-    /**
-     * Create a new component instance.
-     */
-    public function __construct( $menu )
-    {
-        $this->menu = $menu;
-    }
+  /**
+   * Create a new component instance.
+   */
+  public function __construct($menu, $current = null)
+  {
+    $this->menu = $menu;
+    $this->current = $current;
+  }
 
-    /**
-     * Get the view / contents that represent the component.
-     */
-    public function render(): View|Closure|string
-    {
-        return view('components.navbar');
-    }
+  /**
+   * Get the view / contents that represent the component.
+   */
+  public function render(): View|Closure|string
+  {
+    return view('components.navbar');
+  }
 }
