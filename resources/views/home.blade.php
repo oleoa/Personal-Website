@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('main')
 
-  <div class="py-4">
+  <div class="py-4 space-y-4">
 
     <!-- Blue Gradient Div -->
     <div class="bg-gradient-to-r from-blue-900 to-blue-500 backdrop-blur-3xl rounded-3xl xl:h-80 grid xl:grid-cols-2 px-4 xl:pt-0 pt-4">
@@ -19,6 +19,35 @@
 
       <!-- Image -->
       <img src="{{asset('/img/me.webp')}}" alt="Me" class="object-none object-top w-full h-80 pt-4">
+
+    </div>
+
+    <!-- Grid Site Resume -->
+    <div class="grid xl:grid-cols-3 gap-4">
+
+      <!-- About -->
+      <div class="bg-gradient-to-r from-blue-900 to-blue-600 backdrop-blur-3xl rounded-xl p-4 col-span-2">
+        <h2>About Me</h2>
+        <p></p>
+      </div>
+
+      <!-- Portfolio -->
+      <div class="bg-gradient-to-r from-blue-600 to-blue-500 backdrop-blur-3xl rounded-xl p-4">
+        <h2>Portfolio</h2>
+        <p></p>
+      </div>
+
+      <!-- Contact -->
+      <div class="bg-gradient-to-r from-blue-900 to-blue-500 backdrop-blur-3xl rounded-xl p-4">
+        <h2>Contact</h2>
+        <p></p>
+      </div>
+
+      <!-- Library -->
+      <div class="bg-gradient-to-r from-blue-600 to-blue-500 backdrop-blur-3xl rounded-xl p-4 col-span-2">
+        <h2>Library</h2>
+        <p></p>
+      </div>
 
     </div>
 
