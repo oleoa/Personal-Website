@@ -28,7 +28,7 @@
       <!-- About -->
       <div class="bg-gradient-to-r from-blue-900 to-blue-600 backdrop-blur-3xl rounded-xl p-4 col-span-2">
         <h2>About Me</h2>
-        <p></p>
+        <p>Na página sobre mim </p>
       </div>
 
       <!-- Portfolio -->
