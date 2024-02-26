@@ -1,4 +1,5 @@
 @extends('layouts.main')
+@php $hasMargin = true; @endphp
 @section('main')
 
   <div class="py-4 space-y-4">
@@ -13,7 +14,7 @@
         <h1 class="xl:text-8xl text-center pr-12 tracking-tighter" style="text-shadow: rgb(30, 58, 138) 0.75rem 0.75rem 0.75rem;">Software</h1>
 
         <!-- Engineer -->
-        <h1 class="xl:text-8xl text-center pl-12 tracking-tighter" style="text-shadow: rgb(30, 58, 138) 0.75rem 0.75rem 0.75rem;">Engineer</h1>
+        <h1 class="xl:text-8xl text-center pl-12 tracking-tighter" style="text-shadow: rgb(30, 58, 138) 0.75rem 0.75rem 0.75rem;">Developer</h1>
 
       </div>
 

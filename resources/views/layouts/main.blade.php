@@ -30,7 +30,12 @@
     
     <x-navbar :menu="$menu" :current="$current"/>
 
-    <main class="pt-20 xl:px-64 px-4 row-span-1">
+    <main @class([
+      'pt-20',
+      'xl:px-64' => $hasMargin,
+      'px-4' => $hasMargin,
+      'row-span-1'
+    ])>
 
       @yield('main')
 
