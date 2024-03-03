@@ -1,22 +1,26 @@
 {
-    "1": {
-        "title": "Tripmaster",
-        "github": "https://github.com/leonardo-abreu-programmer/Tripmaster",
-        "paragraph": "Tripmaster revolutionizes travel planning by offering users a seamless platform to create and organize their trips effortlessly. With Tripmaster, users can simply input their desired destinations, travel dates, and preferences to generate customized itineraries tailored to their needs. The platform facilitates day-to-day planning, ensuring a well-structured travel experience from start to finish. Moreover, Tripmaster provides a comprehensive selection of accommodation options, allowing users to book their stay directly through the platform. Additionally, Tripmaster stands out by enabling peer-to-peer house rentals, giving users the opportunity to rent out their homes to fellow travelers and fostering a sense of community and authenticity in travel experiences. With its user-friendly interface and innovative features, Tripmaster simplifies the entire trip planning process, making it the ultimate travel companion for adventurers worldwide.",
-        "img": "tripmaster.jpg"
-    },
-    "2": {
-        "title": "Achieve Rent a Car",
-        "github": "https://github.com/leonardo-abreu-programmer/Achieve-Rent-A-Car",
-        "link": "https://achieverentacar.com/",
-        "paragraph": "Achieve Rent A Car is a car rental company located on the island of Madeira. I was the developer who designed and created their website, utilizing the API provided by their system. I handled everything from the design to the most technical aspects of the project. It was a rewarding experience to contribute to enhancing their online presence and facilitating their services.",
-        "img": "achieve.jpg"
-    },
-    "3": {
-        "title": "Personal Website",
-        "github": "https://github.com/leonardo-abreu-programmer/Personal-Website",
-        "link": "https://leonardoabreu.com/",
-        "paragraph": "Personal website developed to share a bit about myself, showcase my work, organize my ideas, provide a means of contact, and create a platform where I can easily and neatly store small project ideas. It's a space designed for accessibility and organization, ensuring that my creative ventures are readily available and well-structured.",
-        "img": "personal.jpg"
-    }
+  "1": {
+    "title": "Tripmaster",
+    "github": "https://github.com/oleoa/Tripmaster",
+    "paragraph": "Tripmaster revolutionizes travel planning by offering users a seamless platform to create and organize their trips effortlessly. With Tripmaster, users can simply input their desired destinations, travel dates, and preferences to generate customized itineraries tailored to their needs. The platform facilitates day-to-day planning, ensuring a well-structured travel experience from start to finish. Moreover, Tripmaster provides a comprehensive selection of accommodation options, allowing users to book their stay directly through the platform. Additionally, Tripmaster stands out by enabling peer-to-peer house rentals, giving users the opportunity to rent out their homes to fellow travelers and fostering a sense of community and authenticity in travel experiences. With its user-friendly interface and innovative features, Tripmaster simplifies the entire trip planning process, making it the ultimate travel companion for adventurers worldwide.",
+    "img": "tripmaster.jpg"
+  },
+  "2": {
+    "title": "Achieve Rent a Car",
+    "github": "https://github.com/oleoa/Achieve-Rent-A-Car",
+    "link": "https://achieverentacar.com/",
+    "paragraph": "Achieve Rent A Car is a car rental company located on the island of Madeira. I was the developer who designed and created their website, utilizing the API provided by their system. I handled everything from the design to the most technical aspects of the project. It was a rewarding experience to contribute to enhancing their online presence and facilitating their services."
+  },
+  "3": {
+    "title": "Personal Website",
+    "github": "https://github.com/oleoa/Personal-Website",
+    "link": "https://leonardoabreu.com/",
+    "paragraph": "Personal website developed to share a bit about myself, showcase my work, organize my ideas, provide a means of contact, and create a platform where I can easily and neatly store small project ideas. It's a space designed for accessibility and organization, ensuring that my creative ventures are readily available and well-structured."
+  },
+  "4": {
+    "title": "Flow Tracker",
+    "github": "https://github.com/oleoa/FlowTracker",
+    "link": "https://flowtracker.netlify.app/",
+    "paragraph": "Flow Tracker is a web application that allows users to track their daily activities and monitor their productivity. The platform provides a user-friendly interface where users can input their daily tasks and categorize them based on their nature. Flow Tracker also offers a comprehensive overview of the user's productivity, displaying the time spent on each task and the overall productivity level. The platform also includes a calendar feature, allowing users to visualize their daily activities and plan their tasks accordingly. With its intuitive design and innovative features, Flow Tracker is the ultimate tool for users to manage their time effectively and optimize their productivity."
+  }
 }

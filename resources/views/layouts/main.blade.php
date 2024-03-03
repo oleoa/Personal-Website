@@ -14,6 +14,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/cf64f43fc0.js" crossorigin="anonymous"></script>
+
     <!-- Css and JS -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
