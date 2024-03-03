@@ -1,4 +1,5 @@
 @extends('layouts.main')
+@php $hasMargin = true; @endphp
 @section('main')
     
     <div class="grid gap-4 py-4">

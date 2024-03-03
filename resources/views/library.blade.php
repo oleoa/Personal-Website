@@ -1,4 +1,5 @@
 @extends('layouts.main')
+@php $hasMargin = true; @endphp
 @section('main')
 
     <div class="py-4 flex flex-col gap-4">
