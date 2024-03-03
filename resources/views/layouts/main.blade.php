@@ -27,7 +27,11 @@
 
   <body class="min-h-screen grid grid-rows-1 bg-neutral-800 text-white alice-regular">
 
-    <x-loader/>
+    <div class="fixed top-0 left-0 w-full h-full hidden items-center justify-center z-50" id="loader">
+      <div class="p-4 bg-gradient-to-r from-blue-900 to-blue-500 rounded-full animate-spin">
+        <i class="fa-solid fa-rotate text-5xl p-4 rounded-md"></i>
+      </div>
+    </div>
 
     <x-sidebar :menu="$menu" :current="$current"/>
     
