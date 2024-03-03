@@ -7,7 +7,7 @@
     <meta name="description" content="Leonardo Abreu Personal Website">
     <meta name="author" content="Leonardo Abreu de Paulo">
     <script src="https://kit.fontawesome.com/cf64f43fc0.js" crossorigin="anonymous"></script>
-    @vite(['resources/css/app.css', 'resources/js/library.js'])
+    @vite('resources/css/app.css')
     <title>@lang($title)</title>
   </head>
 
