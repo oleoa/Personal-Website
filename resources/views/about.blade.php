@@ -1,5 +1,9 @@
 @extends('layouts.main')
-@php $hasMargin = false; @endphp
+@php
+  $title = 'about.title';
+  $hasMargin = false;
+  $current = 'about';
+@endphp
 @section('main')
 
   <div class="grid xl:grid-cols-7">

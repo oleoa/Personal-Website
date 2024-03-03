@@ -1,5 +1,9 @@
 @extends('layouts.main')
-@php $hasMargin = true; @endphp
+@php
+  $title = 'library.title';
+  $hasMargin = true;
+  $current = 'library';
+@endphp
 @section('main')
 
   <div class="py-4 flex flex-col gap-4">

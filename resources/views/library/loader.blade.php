@@ -1,5 +1,8 @@
 @vite('resources/js/library/loader.js')
 @extends('layouts.library')
+@php
+  $title = 'Loader'
+@endphp
 @section('main')
 
   <b href="" class="loaderActivatorLibrary p-4 inline-flex cursor-pointer">Example</b>

@@ -7,9 +7,13 @@ export default {
   ],
   theme: {
     extend: {
-      animation: {
-        'loader': 'spin 2s linear infinite',
-      },
+      colors: {
+        'primary': {
+          100: '#3A0CA3',
+          200: '#7209B7'
+        },
+        'secondary': '#16161D',
+      }
     },
   },
   plugins: [],

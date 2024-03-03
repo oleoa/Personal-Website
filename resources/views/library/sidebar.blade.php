@@ -1,5 +1,8 @@
 @vite('resources/js/library/sidebar.js')
 @extends('layouts.library')
+@php
+  $title = 'Sidebar'
+@endphp
 @section('main')
 
   <!-- Garfo -->

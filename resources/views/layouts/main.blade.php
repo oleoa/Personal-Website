@@ -25,24 +25,49 @@
 
   </head>
 
-  <body class="min-h-screen grid grid-rows-1 bg-neutral-800 text-white alice-regular">
+  <body class="h-full bg-secondary text-white alice-regular">
 
+    <!-- Loader -->
     <div class="fixed top-0 left-0 w-full h-full hidden items-center justify-center z-50" id="loader">
-      <div class="p-4 bg-gradient-to-r from-blue-900 to-blue-500 rounded-full animate-spin">
+
+      <!-- Spinner Background -->
+      <div class="p-4 bg-gradient-to-r from-primary-100 to-primary-200 rounded-full animate-spin">
+
+        <!-- Spinner Icon -->
         <i class="fa-solid fa-rotate text-5xl p-4 rounded-md"></i>
+
       </div>
+
     </div>
 
-    <x-sidebar :menu="$menu" :current="$current"/>
-    
-    <x-navbar :menu="$menu" :current="$current"/>
+    <!-- Fork -->
+    <i id="openSidebar" class="fa-solid fa-bars cursor-pointer p-4 left-0 top-0 fixed xl:hidden"></i>
 
-    <main @class([
-      'pt-20',
-      'xl:px-64' => $hasMargin,
-      'px-4' => $hasMargin,
-      'row-span-1'
-    ])>
+    <!-- Sidebar -->
+    <aside class="xl:hidden h-full w-36 fixed bg-neutral-700 top-0 left-0 transition-transform duration-300 transform -translate-x-full flex flex-col z-40" id="sidebar">
+
+      <!-- Items -->
+      <x-bar-items :current="$current"/>
+
+    </aside>
+
+    <!-- Overlay -->
+    <div id="overlay" class="xl:hidden h-full w-full fixed top-0 left-0 z-30 transition-transform duration-300 transform -translate-x-full"></div>
+    
+    <!-- Navbar -->
+    <nav class="hidden xl:grid grid-cols-5 justify-items-center items-center select-none text-neutral-400 h-20 xl:px-64 w-full fixed z-40 top-0 bg-neutral-900" id="navbar">
+      
+      <!-- Items -->
+      <x-bar-items :current="$current"/>
+    
+    </nav>
+
+    <main
+      @class([
+        'xl:pt-20 pt-12',
+        'xl:px-64' => $hasMargin,
+        'px-4' => $hasMargin
+      ])>
 
       @yield('main')
 

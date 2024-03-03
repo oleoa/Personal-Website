@@ -9,41 +9,36 @@ use App\Helpers\Movies;
 
 class Pages extends Controller
 {
-  public function Home(Request $request)
+  public function Home()
   {
-    return $this->load('home', $request);
+    return view('home');
   }
 
-  public function area41(Request $request)
+  public function About()
   {
-    return $this->load('41', $request);
+    return view('about');
   }
 
-  public function About(Request $request)
+  public function Portfolio()
   {
-    return $this->load('about', $request);
+    $data['projects'] = $this->json->get('portfolio.json');
+    return view('portfolio', $data);
   }
 
-  public function Portfolio(Request $request)
+  public function Library()
   {
-    $api = new Portfolio();
-    $projects = $api->listProjects();
-    $this->data['projects'] = $projects;
-    return $this->load('portfolio', $request);
+    $data['library'] = $this->json->get('library.json');
+    return view('library', $data);
   }
 
-  public function Skills(Request $request)
+  public function Contact()
   {
-    return $this->load('skills', $request);
+    return view('contact');
   }
 
-  public function Contact(Request $request)
+  public function Alice()
   {
-    return $this->load('contact', $request);
-  }
-
-  public function Alice(Request $request)
-  {
+    $data = [];
     $met = strtotime("2023-07-02");
     $end = strtotime("2023-08-28");
     $restarted = strtotime("2023-11-26");
@@ -55,12 +50,12 @@ class Pages extends Controller
     $diff_days_1 = round($diff_seconds_1 / (60 * 60 * 24), 2);
     $diff_months_1 = round($diff_seconds_1 / (60 * 60 * 24 * 30.4), 2);
     $diff_years_1 = $diff_seconds_1 / (60 * 60 * 24 * 365.25);
-    $this->data['first']['seconds'] = $diff_seconds_1;
-    $this->data['first']['minutes'] = $diff_minutes_1;
-    $this->data['first']['hours'] = $diff_hours_1;
-    $this->data['first']['days'] = $diff_days_1;
-    $this->data['first']['months'] = $diff_months_1;
-    $this->data['first']['years'] = $diff_years_1;
+    $data['first']['seconds'] = $diff_seconds_1;
+    $data['first']['minutes'] = $diff_minutes_1;
+    $data['first']['hours'] = $diff_hours_1;
+    $data['first']['days'] = $diff_days_1;
+    $data['first']['months'] = $diff_months_1;
+    $data['first']['years'] = $diff_years_1;
 
     $diff_seconds_2 = abs($restarted - $now);
     $diff_minutes_2 = round($diff_seconds_2 / 60, 2);
@@ -68,16 +63,16 @@ class Pages extends Controller
     $diff_days_2 = round($diff_seconds_2 / (60 * 60 * 24), 2);
     $diff_months_2 = round($diff_seconds_2 / (60 * 60 * 24 * 30.4), 2);
     $diff_years_2 = $diff_seconds_2 / (60 * 60 * 24 * 365.25);
-    $this->data['last']['seconds'] = $diff_seconds_2;
-    $this->data['last']['minutes'] = $diff_minutes_2;
-    $this->data['last']['hours'] = $diff_hours_2;
-    $this->data['last']['days'] = $diff_days_2;
-    $this->data['last']['months'] = $diff_months_2;
-    $this->data['last']['years'] = $diff_years_2;
+    $data['last']['seconds'] = $diff_seconds_2;
+    $data['last']['minutes'] = $diff_minutes_2;
+    $data['last']['hours'] = $diff_hours_2;
+    $data['last']['days'] = $diff_days_2;
+    $data['last']['months'] = $diff_months_2;
+    $data['last']['years'] = $diff_years_2;
 
     $api = new Movies();
-    $this->data['movies'] = $api->get();
+    $data['movies'] = $api->get();
 
-    return $this->load('alice', $request);
+    return view('alice');
   }
 }

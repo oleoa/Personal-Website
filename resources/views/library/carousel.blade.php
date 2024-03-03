@@ -2,6 +2,7 @@
 @extends('layouts.library')
 @section('main')
 @php
+  $title = 'Carousel';
   $slides = 5;
 @endphp
 

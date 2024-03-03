@@ -1,5 +1,9 @@
 @extends('layouts.main')
-@php $hasMargin = true; @endphp
+@php
+  $title = 'contact.title';
+  $hasMargin = true;
+  $current = 'contact';
+@endphp
 @section('main')
 
   <div class="grid xl:grid-cols-5 py-4 xl:gap-12 gap-4">

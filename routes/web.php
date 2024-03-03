@@ -36,16 +36,22 @@ Route::get('/about', [Pages::class, 'About'])->name('about');
 
 Route::get('/portfolio', [Pages::class, 'Portfolio'])->name('portfolio');
 
-Route::get('/library', [Library::class, 'index'])->name('library');
-Route::get('/sidebar', [Library::class, 'sidebar'])->name('sidebar');
-Route::get('/loader', [Library::class, 'loader'])->name('loader');
-Route::get('/faq', [Library::class, 'faq'])->name('faq');
-Route::get('/carousel', [Library::class, 'carousel'])->name('carousel');
+Route::get('/library', [Pages::class, 'Library'])->name('library');
+
+Route::controller(Library::class)->group(function(){
+
+  Route::get('/sidebar', 'sidebar')->name('sidebar');
+
+  Route::get('/loader', 'loader')->name('loader');
+
+  Route::get('/faq', 'faq')->name('faq');
+
+  Route::get('/carousel', 'carousel')->name('carousel');
+
+});
 
 Route::get('/contact', [Pages::class, 'Contact'])->name('contact');
 Route::post('/contact', [Requests::class, 'Contact'])->name('contact');
-
-Route::get('/instagram', [Pages::class, 'instagram'])->name('instagram');
 
 /*
 Route::get('/alice', [Pages::class, 'Alice'])->name('alice');

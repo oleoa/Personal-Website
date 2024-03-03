@@ -1,11 +1,15 @@
 @extends('layouts.main')
-@php $hasMargin = true; @endphp
+@php
+  $title = 'home.title';
+  $hasMargin = true;
+  $current = 'home';
+@endphp
 @section('main')
 
   <div class="py-4 space-y-4">
 
     <!-- Blue Gradient Div -->
-    <div class="bg-gradient-to-r from-blue-900 to-blue-500 backdrop-blur-3xl rounded-3xl xl:h-80 grid xl:grid-cols-2 px-4 xl:pt-0 pt-4">
+    <div class="bg-gradient-to-r from-primary-100 to-primary-200 backdrop-blur-3xl rounded-3xl xl:h-80 grid xl:grid-cols-2 px-4 xl:pt-0 pt-4">
 
       <!-- Text -->
       <div class="flex flex-col items-center justify-center italic">

@@ -1,5 +1,9 @@
 @extends('layouts.main')
-@php $hasMargin = true; @endphp
+@php
+  $title = 'portfolio.title';
+  $hasMargin = true;
+  $current = 'portfolio';
+@endphp
 @section('main')
     
   <div class="grid grid-rows-3 gap-4 py-4">

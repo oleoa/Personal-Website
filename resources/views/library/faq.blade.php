@@ -1,5 +1,8 @@
 @vite('resources/js/library/faq.js')
 @extends('layouts.library')
+@php
+  $title = 'FAQ'
+@endphp
 @section('main')
 
   <div class="xl:px-margin px-4 text-white flex flex-col gap-2 p-4">
