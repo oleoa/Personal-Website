@@ -55,7 +55,7 @@
     <div id="overlay" class="xl:hidden h-full w-full fixed top-0 left-0 z-30 transition-transform duration-300 transform -translate-x-full"></div>
     
     <!-- Navbar -->
-    <nav class="hidden xl:grid grid-cols-5 justify-items-center items-center select-none text-neutral-400 h-20 xl:px-64 w-full fixed z-40 top-0 bg-neutral-900" id="navbar">
+    <nav class="hidden xl:grid grid-cols-5 justify-items-center items-center select-none text-neutral-400 h-20 xl:px-64 w-full fixed z-40 top-0 bg-secondary backdrop-blur-3xl">
       
       <!-- Items -->
       <x-bar-items :current="$current"/>

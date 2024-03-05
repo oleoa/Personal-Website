@@ -12,7 +12,7 @@ export default {
           100: '#3A0CA3',
           200: '#7209B7'
         },
-        'secondary': '#16161D',
+        'secondary': '#161616',
       }
     },
   },

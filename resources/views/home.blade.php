@@ -1,60 +1,46 @@
 @extends('layouts.main')
 @php
-  $title = 'home.title';
-  $hasMargin = true;
+  $title = 'title.home';
+  $hasMargin = false;
   $current = 'home';
 @endphp
 @section('main')
 
-  <div class="py-4 space-y-4">
+  <!-- Software Developer -->
+  <div class="xl:h-96 grid xl:grid-cols-2 xl:pt-0 pt-4 bg-gradient-to-r from-primary-200 to-primary-100 backdrop-blur-3xl xl:px-64 px-4 relative">
 
-    <!-- Blue Gradient Div -->
-    <div class="bg-gradient-to-r from-primary-100 to-primary-200 backdrop-blur-3xl rounded-3xl xl:h-80 grid xl:grid-cols-2 px-4 xl:pt-0 pt-4">
+    <!-- Text -->
+    <div class="flex flex-col items-center justify-center italic">
 
-      <!-- Text -->
-      <div class="flex flex-col items-center justify-center italic">
+      <!-- Software -->
+      <h1 class="xl:text-8xl text-center pr-16 tracking-tighter" style="text-shadow: rgb(30, 58, 138) 0.75rem 0.75rem 0.75rem;">Software</h1>
 
-        <!-- Software -->
-        <h1 class="xl:text-8xl text-center pr-12 tracking-tighter" style="text-shadow: rgb(30, 58, 138) 0.75rem 0.75rem 0.75rem;">Software</h1>
-
-        <!-- Engineer -->
-        <h1 class="xl:text-8xl text-center pl-12 tracking-tighter" style="text-shadow: rgb(30, 58, 138) 0.75rem 0.75rem 0.75rem;">Developer</h1>
-
-      </div>
-
-      <!-- Image -->
-      <img src="{{asset('/img/me.webp')}}" alt="Me" class="object-none object-top w-full h-80 pt-4">
+      <!-- Developer -->
+      <h1 class="xl:text-8xl text-center pl-16 tracking-tighter" style="text-shadow: rgb(30, 58, 138) 0.75rem 0.75rem 0.75rem;">Developer</h1>
 
     </div>
 
-    <!-- Grid Site Resume -->
-    <div class="grid xl:grid-cols-3 gap-4">
+    <!-- Image -->
+    <img src="{{asset('/img/me.webp')}}" alt="Me" class="object-none object-top w-full h-96 pt-4">
 
-      <!-- About -->
-      <div class="bg-gradient-to-r from-blue-900 to-blue-600 backdrop-blur-3xl rounded-xl p-4 col-span-2">
-        <h2>About Me</h2>
-        <p>Na página sobre mim </p>
-      </div>
+  </div>
 
-      <!-- Portfolio -->
-      <div class="bg-gradient-to-r from-blue-600 to-blue-500 backdrop-blur-3xl rounded-xl p-4">
-        <h2>Portfolio</h2>
-        <p></p>
-      </div>
+  <!-- What do I do? -->
+  <div class="grid grid-cols-2 gap-4 xl:px-64 p-4">
 
-      <!-- Contact -->
-      <div class="bg-gradient-to-r from-blue-900 to-blue-500 backdrop-blur-3xl rounded-xl p-4">
-        <h2>Contact</h2>
-        <p></p>
-      </div>
-
-      <!-- Library -->
-      <div class="bg-gradient-to-r from-blue-600 to-blue-500 backdrop-blur-3xl rounded-xl p-4 col-span-2">
-        <h2>Library</h2>
-        <p></p>
-      </div>
+    <div class="space-y-4">
+      
+      <h1>What Do I Do?</h1>
+  
+      <p class="text-start">
+        I am a software developer who loves to create web applications and websites.
+        I am passionate about learning new technologies and programming languages.
+        I am always looking for new challenges and opportunities to grow as a developer.
+      </p>
 
     </div>
+
+    <img src="" alt="">
 
   </div>
 
