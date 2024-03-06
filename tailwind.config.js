@@ -13,6 +13,9 @@ export default {
           200: '#7209B7'
         },
         'secondary': '#161616',
+      },
+      lineHeight: {
+        '0': 0
       }
     },
   },
