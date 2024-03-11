@@ -50,22 +50,25 @@
     </div>
 
     <!-- Carousel Buttons -->
-    <div class="absolute top-0 w-full h-full hidden justify-between xl:items-center items-end xl:z-auto z-50" id="carousel-buttons-div">
+    <div class="absolute top-0 w-full h-full hidden justify-between xl:items-center items-end xl:z-auto z-50" id="carousel-buttons-div-example">
           
       <!-- Previous Button -->
       <button class="cursor-pointer w-32 flex items-center justify-center" id="prevBtn-example">
-        <i class="fas fa-arrow-left p-4 xl:h-auto bg-flagRed h-16 w-16 text-4xl rounded-xl text-white"></i>
+        <i class="fas fa-arrow-left p-4 xl:h-auto bg-black h-16 w-16 text-4xl rounded-xl text-white"></i>
       </button>
       
       <!-- Next Button -->
       <button class="cursor-pointer w-32 flex items-center justify-center" id="nextBtn-example">
-        <i class="fas fa-arrow-right p-4 xl:h-auto bg-flagRed h-16 w-16 text-4xl rounded-xl text-white"></i>
+        <i class="fas fa-arrow-right p-4 xl:h-auto bg-black h-16 w-16 text-4xl rounded-xl text-white"></i>
       </button>
   
     </div>
 
     <!-- Carousel Indicator -->
-    <div class="absolute bottom-0 w-full hidden justify-center items-center gap-2 p-4 xl:z-auto z-40" id="carousel-indicators-div">
+    <div class="absolute bottom-0 w-full hidden justify-center items-center gap-2 p-4 xl:z-auto z-40" id="carousel-indicators-div-example">
+    
+      <input type="hidden" id="carousel-selected-indicator-color-example" value="bg-white">
+      <input type="hidden" id="carousel-default-indicator-color-example" value="bg-black">
     
       @for ($i = 0; $i <= $slides-1; $i++)
       

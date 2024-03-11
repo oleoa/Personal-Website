@@ -48,6 +48,8 @@ Route::controller(Library::class)->group(function(){
 
   Route::get('/carousel', 'carousel')->name('carousel');
 
+  Route::get('/carousel2', 'carousel2')->name('carousel2');
+
 });
 
 Route::get('/contact', [Pages::class, 'Contact'])->name('contact');

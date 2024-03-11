@@ -25,4 +25,9 @@ class Library extends Controller
   {
     return view('library.carousel');
   }
+
+  public function carousel2()
+  {
+    return view('library.carousel2');
+  }
 }
