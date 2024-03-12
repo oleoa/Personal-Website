@@ -4,12 +4,6 @@
 ])>
   @lang("bar.home")
 </a>
-<a href="{{route('about')}}" @class([
-  "h-min hover:text-white hover:font-bold loaderActivator",
-  "text-blue-400" => $current=='about'
-])>
-  @lang("bar.about")
-</a>
 <a href="{{route('portfolio')}}" @class([
   "h-min hover:text-white hover:font-bold loaderActivator",
   "text-blue-400" => $current=='portfolio'

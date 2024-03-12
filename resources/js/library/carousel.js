@@ -9,47 +9,71 @@ class Carousel
   counter;
   automation;
   positions;
+  slidesPerView;
+  isBlurPast;
 
   constructor(id, secondsPerSlide, slidesPerView)
   {
     this.id = id;
     this.secondsPerSlide = secondsPerSlide;
+    this.slidesPerView = slidesPerView;
+    this.isBlurPast = false;
 
     this.carouselSlide = document.querySelector('#carousel-slide-'+this.id);
-    if(!this.carouselSlide)
-      return;
+    if(!this.carouselSlide) return;
 
     this.carouselLength = (this.carouselSlide.children.length - 1);
     this.prevBtn = document.getElementById('prevBtn-'+this.id);
     this.nextBtn = document.getElementById('nextBtn-'+this.id);
-    this.positions = [];
     this.counter = 0;
 
-    if(slidesPerView == 1)
-    {
-      for(let i = 0; i <= this.carouselLength; i++)
-        this.positions.push(i*-100);
-    }
-    else if(slidesPerView == 3)
-    {
-      let currentValue = (100/3);
-      for(let i = 0; i <= this.carouselLength; i++)
-      {
-        this.positions.push(currentValue);
-        currentValue -= (100/3);
-      }
-    }
+    this.adjustPositions();
 
-    this.carouselSlide.style.transform = 'translateX('+this.positions[0]+'%)';
+    this.carouselSlide.style.transform = 'translateX('+this.positions[0]+')';
 
     this.adjustSize();
     window.addEventListener('resize', this.adjustSize.bind(this));
+  }
+
+  adjustPositions()
+  {
+    if(this.slidesPerView == 1)
+    {
+      this.positions = [];
+      for(let i = 0; i <= this.carouselLength; i++)
+        this.positions.push((i*-100)+'%');
+    }
+    else if(this.slidesPerView == 3)
+    {
+      this.positions = [];
+      let computedCarousel = window.getComputedStyle(this.carouselSlide);
+      let contentWidth = parseFloat(computedCarousel.width) - (parseFloat(computedCarousel.paddingLeft) + parseFloat(computedCarousel.paddingRight) );
+      let currentValue = (contentWidth/3);
+      for(let i = 0; i <= this.carouselLength; i++)
+      {
+        this.positions.push(currentValue+'px');
+        currentValue -= (contentWidth/3);
+      }
+    }
   }
 
   adjustSize()
   {
     const pageWidth = document.documentElement.clientWidth;
     this.carouselSlide.style.width = pageWidth+'px';
+    this.adjustPositions();
+    this.carouselSlide.style.transform = 'translateX(' + this.positions[this.counter] + ')';
+  }
+
+  blurDiv(id)
+  {
+    if(!this.isBlurPast) return;
+    let allDivs = document.querySelectorAll('.'+this.id+'-item');
+    allDivs.forEach(element => {
+      element.classList.add('blur-sm');
+    });
+    const div = document.getElementById(id+'-'+this.id);
+    div.classList.remove('blur-sm');
   }
 
   slideNext()
@@ -58,13 +82,15 @@ class Carousel
     if (this.counter >= this.carouselLength)
     {
       this.counter = 0;
-      this.carouselSlide.style.transform = 'translateX('+this.positions[0]+'%)';
+      if(this.isBlurPast) this.blurDiv(this.counter);
+      this.carouselSlide.style.transform = 'translateX('+this.positions[0]+')';
       this.paintIndicator(this.counter);
       return;
     }
 
     this.counter++;
-    this.carouselSlide.style.transform = 'translateX(' + this.positions[this.counter] + '%)';
+    if(this.isBlurPast) this.blurDiv(this.counter);
+    this.carouselSlide.style.transform = 'translateX(' + this.positions[this.counter] + ')';
     this.paintIndicator(this.counter);
   }
 
@@ -74,13 +100,15 @@ class Carousel
     if (this.counter <= 0)
     {
       this.counter = this.carouselLength;
-      this.carouselSlide.style.transform = 'translateX(' + this.positions[this.counter] + '%)';
+      if(this.isBlurPast) this.blurDiv(this.counter);
+      this.carouselSlide.style.transform = 'translateX(' + this.positions[this.counter] + ')';
       this.paintIndicator(this.counter);
       return;
     }
 
     this.counter--;
-    this.carouselSlide.style.transform = 'translateX(' + this.positions[this.counter] + '%)';
+    if(this.isBlurPast) this.blurDiv(this.counter);
+    this.carouselSlide.style.transform = 'translateX(' + this.positions[this.counter] + ')';
     this.paintIndicator(this.counter);
   }
 
@@ -101,29 +129,30 @@ class Carousel
     clearInterval(this.automation);
     var index = indicator.target.id.split('-')[1];
     this.counter = index;
+    if(this.isBlurPast) this.blurDiv(this.counter);
     this.paintIndicator(index);
-    this.carouselSlide.style.transform = 'translateX(' + this.positions[this.counter] + '%)';
+    this.carouselSlide.style.transform = 'translateX(' + this.positions[this.counter] + ')';
   }
 
   paintIndicator(index)
   {
-    let defaultColor = document.getElementById('carousel-default-indicator-color-'+this.id).value;
-    let selectedColor = document.getElementById('carousel-selected-indicator-color-'+this.id).value;
+    let defaultColor = document.getElementById('carousel-default-indicator-color-'+this.id);
+    let selectedColor = document.getElementById('carousel-selected-indicator-color-'+this.id);
 
     for(var i = 0; i <= this.carouselLength; i++){
       var indicatorClear = document.getElementById('carousel-'+i+'-indicator-'+this.id);
-      indicatorClear.classList.add(defaultColor);
-      indicatorClear.classList.remove(selectedColor);
+      if(defaultColor) indicatorClear.classList.add(defaultColor.value);
+      if(selectedColor) indicatorClear.classList.remove(selectedColor.value);
     }
     
     var indicator = document.getElementById('carousel-'+index+'-indicator-'+this.id);
-    indicator.classList.add(selectedColor);
-    indicator.classList.remove(defaultColor);
+    if(defaultColor) indicator.classList.remove(defaultColor.value);
+    if(selectedColor) indicator.classList.add(selectedColor.value);
   }
 
   /* PUBLIC FUNCTIONS FOR NEEDED FUNCTIONS */
 
-  addSlideAtuomatic()
+  addSlideAutomatic()
   {
     if(!this.carouselSlide) return;
     this.automation = setInterval(this.slideNext.bind(this), this.secondsPerSlide);
@@ -152,13 +181,19 @@ class Carousel
       indicator.addEventListener('click', this.slideIndicator.bind(this));
     }
   }
+
+  blurPast()
+  {
+    this.isBlurPast = true;
+    this.blurDiv(0);
+  }
 }
 
 const example = new Carousel('example', 3000, 1);
-example.addSlideAtuomatic();
+example.addSlideAutomatic();
 example.addIndicators();
 example.addArrows();
 
 const example2 = new Carousel('example2', 3000, 3);
-example2.addSlideAtuomatic();
+example2.addSlideAutomatic();
 example2.addIndicators();

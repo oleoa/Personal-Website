@@ -1,13 +1,11 @@
 {
   "title.home": "Home",
-  "title.about": "About",
   "title.portfolio": "Portfolio",
   "title.library": "Library",
   "title.contact": "Contact",
   "title.alice": "Relationship",
 
   "bar.home": "Home",
-  "bar.about": "About",
   "bar.portfolio": "Portfolio",
   "bar.library": "Library",
   "bar.contact": "Contact"
