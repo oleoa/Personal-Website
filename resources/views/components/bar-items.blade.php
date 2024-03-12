@@ -2,29 +2,29 @@
   "h-min hover:text-white hover:font-bold loaderActivator",
   "text-blue-400" => $current=='home'
 ])>
-  @lang("bar-home")
+  @lang("bar.home")
 </a>
 <a href="{{route('about')}}" @class([
   "h-min hover:text-white hover:font-bold loaderActivator",
   "text-blue-400" => $current=='about'
 ])>
-  @lang("bar-about")
+  @lang("bar.about")
 </a>
 <a href="{{route('portfolio')}}" @class([
   "h-min hover:text-white hover:font-bold loaderActivator",
   "text-blue-400" => $current=='portfolio'
 ])>
-  @lang("bar-portfolio")
+  @lang("bar.portfolio")
 </a>
 <a href="{{route('library')}}" @class([
   "h-min hover:text-white hover:font-bold loaderActivator",
   "text-blue-400" => $current=='library'
 ])>
-  @lang("bar-library")
+  @lang("bar.library")
 </a>
 <a href="{{route('contact')}}" @class([
   "h-min hover:text-white hover:font-bold loaderActivator",
   "text-blue-400" => $current=='contact'
 ])>
-  @lang("bar-contact")
+  @lang("bar.contact")
 </a>
